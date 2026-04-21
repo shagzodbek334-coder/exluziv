@@ -1,0 +1,88 @@
+.con {
+    display: flex;
+    height: 80vh;
+    margin-bottom: 100px;
+}
+
+
+.left {
+    flex: 1;
+    background: #d8e6eb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left img {
+    width: 60%;
+    max-width: 420px;
+}
+
+
+.right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-box {
+    width: 350px;
+}
+
+.form-box h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.form-box p {
+    margin-bottom: 20px;
+    color: #666;
+}
+
+.form-box input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 18px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    outline: none;
+}
+
+/* BUTTONS */
+.primary-btn {
+    width: 100%;
+    padding: 12px;
+    background: #e53935;
+    color: white;
+    border: none;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.google-btn {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.google-btn img {
+    width: 18px;
+}
+
+/* LOGIN LINK */
+.login-link {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.login-link a {
+    color: black;
+    text-decoration: underline;
+}

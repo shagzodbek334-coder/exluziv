@@ -1,0 +1,31 @@
+.category-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    width: 170px;
+    height: 145px;
+    opacity: 1;
+    cursor: pointer;
+
+}
+
+.category-icon img {
+    width: 50px;
+    color: black;
+    height: 50px;
+}
+
+.category-name {
+    color: black;
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.category-card:hover{
+  box-shadow: 1px 1px 10px gray;
+  transition: all 100ms ease-in-out;
+}

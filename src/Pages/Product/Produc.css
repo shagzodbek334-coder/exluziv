@@ -1,0 +1,137 @@
+.co {
+    display: flex;
+    gap: 40px;
+    padding: 40px;
+    color: #000;
+    margin: 0 auto;
+    margin-left: 400px;
+    margin-bottom: 100px;
+}
+
+.leftt {
+    display: flex;
+    gap: 20px;
+}
+
+.thumbnails {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.thumb {
+    width: 170px;
+    height: 138px;
+    opacity: 1;
+    top: 323px;
+    left: 135px;
+    border-radius: 4px;
+
+    background: #eee;
+    border-radius: 6px;
+}
+
+.main-img {
+    width: 500px;
+    height: 600px;
+    opacity: 1;
+    top: 323px;
+    left: 335px;
+    border-radius: 4px;
+
+    background: #f5f5f5;
+    border-radius: 10px;
+}
+
+.rightt {
+    max-width: 400px;
+}
+
+.rating {
+    font-size: 14px;
+    color: #555;
+}
+
+.stock {
+    color: green;
+    margin-left: 10px;
+}
+
+.price {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.desc {
+    color: #666;
+    font-size: 14px;
+}
+
+.colors {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 15px 0;
+}
+
+.color {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+.black {
+    background: black;
+}
+
+.red {
+    background: red;
+}
+
+.sizes {
+    margin: 15px 0;
+}
+
+.sizes button {
+    margin-right: 8px;
+    padding: 6px 10px;
+    border: 1px solid #ccc;
+    background: white;
+}
+
+.sizes .active {
+    background: red;
+    color: white;
+}
+
+.quantity {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.actions {
+    display: flex;
+    gap: 10px;
+}
+
+.buy {
+    background: red;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+}
+
+.fav {
+    border: 1px solid #ccc;
+    padding: 10px;
+    background: white;
+}
+
+.box {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-top: 10px;
+}
