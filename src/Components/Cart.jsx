@@ -2,44 +2,52 @@ import React from 'react'
 import { FaEye, FaHeart, FaStar } from 'react-icons/fa6'
 import "./Cart.css"
 import { Link } from 'react-router-dom'
-function Cart() {
+import { basurl } from '../services'
+
+function Cart({ item }) {
     return (
-        <Link to={"/produc"} className="cart">
-            <div className="cart-img">
-                <span className="discount">-35%</span>
+        <Link onClick={() => {
+            console.log(item?.id);
 
-                <img
-                    src="https://pngimg.com/uploads/keyboard/keyboard_PNG101840.png"
-                    alt=""
-                />
+        }} to={`/product/${item?.id}`} className="cart" >
+            <div className="cart-card">
+                <div className="cart-img">
+                    <span className="discount">-35%</span>
 
-                <div className="icons">
-                    <FaHeart className='s' />
-                    <FaEye className='s' />
+                    <img src={`${basurl}${item?.pictures?.[0]}`} alt="" />
+
+                    <div className="icons">
+                        <FaHeart className='s' />
+                        <FaEye className='s' />
+                    </div>
+
+                    <button className="add-btn">Add To Cart</button>
                 </div>
 
-                <button className="add-btn">Add To Cart</button>
+                <div className="cart-body">
+                    <h3>
+                        {item?.title?.length > 15
+                            ? item.title.slice(0, 15) + "..."
+                            : item?.title}
+                    </h3>
+
+                    <div className="price">
+                        <span className="new">${item?.price}</span>
+                        <span className="old">$1160</span>
+                    </div>
+
+                    <div className="rating">
+                        <FaStar />
+                        <FaStar />
+                        <FaStar />
+                        <FaStar />
+                        <FaStar className="gray" />
+                        <span>(75)</span>
+                    </div>
+                </div>
             </div>
-
-            <div className="cart-body">
-                <h3>AK-900 Wired Keyboard</h3>
-
-                <div className="price">
-                    <span className="new">$960</span>
-                    <span className="old">$1160</span>
-                </div>
-
-                <div className="rating">
-                    <FaStar />
-                    <FaStar />
-                    <FaStar />
-                    <FaStar />
-                    <FaStar className="gray" />
-                    <span>(75)</span>
-                </div>
-            </div>
-        </Link>
+        </Link >
     )
 }
 
-export default Cart
+export default Cart 

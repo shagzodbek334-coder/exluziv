@@ -1,15 +1,18 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import Heroslider from '../../Components/heroslider/Heroslider'
 import { FaCheck, FaChevronRight, FaTruckFast } from 'react-icons/fa6'
 import "./Home.css"
 import Cart from '../../Components/Cart'
 import Categoriya from '../../Components/Categoriya'
 import { TfiHeadphoneAlt } from 'react-icons/tfi'
+import { Datacontext } from '../../App'
 function Home() {
+  const { category } = useContext(Datacontext)
+  const { list } = useContext(Datacontext)
   return (
     <>
       <div className="hero">
-        <Heroslider />
+        <Heroslider category={category} />
 
       </div>
       <section className='sec1'>
@@ -18,12 +21,9 @@ function Home() {
         </div>
         <div className="container">
           <div className="flr">
-            <Cart />
-            <Cart />
-            <Cart />
-            <Cart />
-            <Cart />
-
+            {list?.slice(0, 5).map((item) => (
+              <Cart key={item.id} item={item} />
+            ))}
           </div>
           <button className='viyov'>
             View All Products
@@ -38,7 +38,7 @@ function Home() {
         </div>
         <div className="container">
           <div className="flee">
-            <Categoriya /><Categoriya /><Categoriya /><Categoriya /><Categoriya /><Categoriya />
+            <Categoriya category={category} />
           </div>
         </div>
 
@@ -51,11 +51,9 @@ function Home() {
         </div>
         <div className="container">
           <div className="flr">
-            <Cart />
-            <Cart />
-            <Cart />
-            <Cart />
-            <Cart />
+            {list?.slice(0, 5).map((item) => (
+              <Cart key={item.id} item={item} />
+            ))}
 
           </div>
         </div>
@@ -66,16 +64,9 @@ function Home() {
         </div>
         <div className="container">
           <div className="flr">
-            <Cart />
-            <Cart />
-            <Cart />
-            <Cart />
-            <Cart />
-            <Cart />
-            <Cart />
-            <Cart />
-            <Cart />
-            <Cart />
+            {list?.slice(0, 20).map((item) => (
+              <Cart key={item.id} item={item} />
+            ))}
 
           </div>
         </div>

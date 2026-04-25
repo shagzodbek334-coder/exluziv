@@ -11,7 +11,9 @@ import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import { TbBrandApple } from "react-icons/tb";
 import { FaChevronRight } from "react-icons/fa6";
 
-export default function App() {
+export default function App({category}) {
+    
+
     return (
 
         <div className="fll">
@@ -19,17 +21,14 @@ export default function App() {
 
             <div className="sortirovka">
                 <ul>
-                    <li>Woman’s Fashion <FaChevronRight /></li>
-                    <li>Men’s Fashion <FaChevronRight /></li>
-                    <li>Electronics</li>
-                    <li>Home & Lifestyle</li>
-                    <li>Medicine</li>
-                    <li>Sports & Outdoor</li>
-                    <li>Baby’s & Toys</li>
-                    <li>Groceries & Pets</li>
-                    <li>Health & Beauty</li>
+                    {
+                        category?.map((item, index) => (
+                             <li key={index}>
+                                {item?.title} <FaChevronRight />
+                             </li>
+                        ))
+                    }
                 </ul>
-
             </div>
             <Swiper
                 spaceBetween={30}
